@@ -3,19 +3,32 @@ nasluch.addEventListener('click', function(){
    pobranie(); 
 });
 
+function setup() { //funkcja pobierająca dane z poloniex - odwołująca się do JSONa
+    data = loadJSON("https://poloniex.com/public?command=returnTicker", gotData);
+};
+
+var kursXem; //var wyciągnięty przed funkcje - tak aby mógł być użyty poza nią
+var kursUSD;
+
+function gotData(data) { //funkcja pobierająca z JSON konkretny kurs konkretnej waluty i podmieniająca w HTML
+    kursXem = data.BTC_XEM.last;
+    const kursXemId = document.getElementById("kurs");
+    kursXemId.innerHTML = kursXem;
+    kursUSD = data.USDT_BTC.last;
+};
+
+const dane = document.getElementById('wartosc1');  //wyświetla wprowadzoną ilość XEM
+
 
 function pobranie(){
-    const dane = document.getElementById('wartosc1');  //wyświetla wprowadzoną ilość XEM
-//    console.log(dane.value);
-
     przeliczenieXem();
     function przeliczenieXem(){ // funkcja przeliczająca wprowadzoną wartość XEM względem kursu BTC
-        const xemBtc = dane.value * 2;
+        const xemBtc = dane.value * kursXem;
         const kursXemBtc = document.getElementById("kursXemBtc");
         kursXemBtc.innerHTML = xemBtc;
         przeliczenieDolary();
         function przeliczenieDolary(){
-            const btcUsd = xemBtc * 2;
+            const btcUsd = xemBtc * kursUSD;
             const kursBtcUsd = document.getElementById("kursBtcUsd");
             kursBtcUsd.innerHTML = btcUsd;
             przeliczeniePln();
@@ -29,12 +42,4 @@ function pobranie(){
 }
 
 
-function setup() {
-    data = loadJSON("https://poloniex.com/public?command=returnTicker", gotData);
-};
 
-function gotData(data) {
-    const kursXem = data.BTC_XEM.last;
-    const kursXemId = document.getElementById("kurs");
-    kursXemId.innerHTML = kursXem;
-};
