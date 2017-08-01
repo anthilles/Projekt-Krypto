@@ -1,0 +1,18 @@
+.container {
+    margin: auto 30%;
+    text-align: center;
+}
+
+.buttonWartosc1 {
+    weight: 100%;
+}
+
+.topic{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dane {
+    text-align: center;
+}

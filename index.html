@@ -8,17 +8,22 @@
     <body>
         <div class="container">
             <div class="waluta">
-                <p>XEM ILOŚĆ</p>
+                <p class="topic">XEM ILOŚĆ</p>
                 <input type="number" form="bla" id="wartosc1">
-                <input type="button" class="buttonWartosc1" id="buttonWartosc1" value="oblicz"/>
-                <p>XEM kurs do BTC</p>
-                <div id="kurs">kurs</div>
-                <p>Wartość XEM w BTC</p>
-                <div id="kursXemBtc">bitcoiny</div>    
-                <p>Wartość XEM w dolarach</p>
-                <div id="kursBtcUsd">dolary</div>   
-                <p>Wartość XEM w złotówkach</p>
-                <div id="wartoscPLN">złotówki</div>    
+                <input type="button" class="buttonWartosc1" id="buttonWartosc1" value="Oblicz"/>
+                <p class="topic">Adres portfela</p>
+                <input type="number" form="bla" id="adresportfela">
+                <input type="button" class="buttonPortfel" id="buttonPortfel" value="Dodaj"/>
+                <p class="topic">XEM kurs do BTC</p>
+                <div id="kurs" class="dane">kurs</div>
+                <p class="topic">Wartość XEM w BTC</p>
+                <div id="kursXemBtc" class="dane">XEM/BTC</div>
+                <p class="topic">Kurs dolara</p>
+                <div id="kursUsdPln" class="dane">kurs</div>      
+                <p class="topic">Wartość XEM w USDT</p>
+                <div id="kursBtcUsd" class="dane">XEM/USDT</div>   
+                <p class="topic">Wartość XEM w złotówkach</p>
+                <div id="wartoscPLN" class="dane">XEM/PLN</div>    
             </div>
         </div>
         <script src="script.js"></script>
