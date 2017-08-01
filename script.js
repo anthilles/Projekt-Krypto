@@ -40,13 +40,15 @@ function pobranie(){
         przeliczenieDolary();
         function przeliczenieDolary(){
             const btcUsd = xemBtc * kursUSD;
+            const btcUsd2 = btcUsd.toFixed(2);
             const kursBtcUsd = document.getElementById("kursBtcUsd");
-            kursBtcUsd.innerHTML = btcUsd;
+            kursBtcUsd.innerHTML = btcUsd2 + ' USDT';
             przeliczeniePln();
             function przeliczeniePln(){
-                const usdPln = btcUsd * JsonKursDolara;
+                const usdPln = btcUsd2 * JsonKursDolara;
+                const usdPln2 = usdPln.toFixed(2);
                 const kursBtcUsd = document.getElementById("wartoscPLN");
-                kursBtcUsd.innerHTML = usdPln;
+                kursBtcUsd.innerHTML = usdPln2 + ' zł';
             }
         }
     }
@@ -63,8 +65,8 @@ xmlhttp.onreadystatechange = function loaddata() {
     if (this.readyState == 4 && this.status == 200) {
         myObj = JSON.parse(this.responseText);
         JsonKursDolara = myObj.rates[0].ask;
-        document.getElementById("kursUsdPln").innerHTML = JsonKursDolara;
-        console.log('bla3!');
+        JsonKursDolara2 = JsonKursDolara.toFixed(2);
+        document.getElementById("kursUsdPln").innerHTML = JsonKursDolara2 + ' zł';
         setTimeout(loaddata,5000);
     }
             
