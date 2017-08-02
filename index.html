@@ -3,29 +3,111 @@
     <head>
         <title>Projekt kontrola portfela</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
         <div class="container">
             <div class="waluta">
-                <p class="topic">XEM ILOŚĆ</p>
+                <div class="page-header">
+  <h1>Szybkie przeliczenie wartości posiadanych xemów <small>XEM --> BTC / USDT / PLN</small></h1>
+</div>
+                <div class="row">
+                    <div class="col-lg-6">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Liczba posiadanych XEM</h3>
+                    </div>
+                        <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" id="buttonWartosc1" type="button">Oblicz</button>
+                        </span>
+                        <input type="text" class="form-control" id="wartosc1" placeholder="Podaj liczbę posiadanych XEM">
+                        </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                                            <div class="panel-heading">
+                        <h3 class="panel-title">Adres portfela XEM</h3>
+                    </div>
+                        <div class="input-group">
+                        <input type="text" class="form-control" id="buttonPortfel" placeholder="Dodaj adres swojego portfela XEM">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Dodaj</button>
+                        </span>
+                        </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
+                <!-- <p class="topic">XEM ILOŚĆ</p>
                 <input type="number" form="bla" id="wartosc1">
-                <input type="button" class="buttonWartosc1" id="buttonWartosc1" value="Oblicz"/>
-                <p class="topic">Adres portfela</p>
+                <input type="button" class="buttonWartosc1" id="buttonWartosc1" value="Oblicz"/> -->
+                <!-- <p class="topic">Adres portfela</p>
                 <input type="number" form="bla" id="adresportfela">
-                <input type="button" class="buttonPortfel" id="buttonPortfel" value="Dodaj"/>
-                <p class="topic">XEM kurs do BTC</p>
+                <input type="button" class="buttonPortfel" id="buttonPortfel" value="Dodaj"/> -->
+
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">XEM kurs do BTC</h3>
+                </div>
+                <div class="panel-body" div id="kurs">
+                    Kurs
+                </div>
+                </div>
+
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Wartość XEM w BTC</h3>
+                </div>
+                <div class="panel-body" id="kursXemBtc">
+                    XEM/BTC
+                </div>
+                </div>
+
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Kurs dolara</h3>
+                </div>
+                <div class="panel-body" id="kursUsdPln">
+                    kurs
+                </div>
+                </div>
+
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Wartość XEM w USDT</h3>
+                </div>
+                <div class="panel-body" id="kursBtcUsd">
+                    XEM/USDT
+                </div>
+                </div>
+
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Wartość XEM w złotówkach</h3>
+                </div>
+                <div class="panel-body" id="wartoscPLN">
+                    XEM/PLN
+                </div>
+                </div>
+
+                <!-- <p class="topic">XEM kurs do BTC</p>
                 <div id="kurs" class="dane">kurs</div>
                 <p class="topic">Wartość XEM w BTC</p>
-                <div id="kursXemBtc" class="dane">XEM/BTC</div>
-                <p class="topic">Kurs dolara</p>
-                <div id="kursUsdPln" class="dane">kurs</div>      
-                <p class="topic">Wartość XEM w USDT</p>
-                <div id="kursBtcUsd" class="dane">XEM/USDT</div>   
-                <p class="topic">Wartość XEM w złotówkach</p>
-                <div id="wartoscPLN" class="dane">XEM/PLN</div>    
+                <div id="kursXemBtc" class="dane">XEM/BTC</div> -->
+                <!-- <p class="topic">Kurs dolara</p>
+                <div id="kursUsdPln" class="dane">kurs</div>       -->
+                <!-- <p class="topic">Wartość XEM w USDT</p>
+                <div id="kursBtcUsd" class="dane">XEM/USDT</div>    -->
+                <!-- <p class="topic">Wartość XEM w złotówkach</p>
+                <div id="wartoscPLN" class="dane">XEM/PLN</div>     -->
             </div>
-        </div>
+                        </div>
+            <footer class="footer">
+                <div class="container">
+                    <p>Wykonanie: anthilles || JSON - Api: NBP / Poloniex || XEM: </p>
+                </div>
+            </footer>
+
         <script src="script.js"></script>
     </body>    
 </html>
