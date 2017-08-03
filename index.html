@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="pl">
     <head>
-        <title>Projekt kontrola portfela</title>
+        <title>KalkuXEMlator</title>
+        <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,7 +24,7 @@
                         <span class="input-group-btn">
                             <button class="btn btn-default" id="buttonWartosc1" type="button">Oblicz</button>
                         </span>
-                        <input type="text" class="form-control" id="wartosc1" placeholder="Podaj liczbę posiadanych XEM">
+                        <input type="number" class="form-control" id="wartosc1" placeholder="Podaj liczbę posiadanych XEM">
                         </div><!-- /input-group -->
                     </div><!-- /.col-lg-6 -->
                     <div class="col-lg-6">
@@ -31,9 +32,9 @@
                         <h3 class="panel-title">Adres portfela XEM</h3>
                     </div>
                         <div class="input-group">
-                        <input type="text" class="form-control" id="buttonPortfel" placeholder="Dodaj adres swojego portfela XEM">
+                        <input type="text" class="form-control" id="wartoscPortfela" placeholder="W PRZYSZŁOŚCI || Dodaj adres swojego portfela XEM">
                         <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">Dodaj</button>
+                            <button class="btn btn-default" type="button" id="buttonPortfel">Dodaj</button>
                         </span>
                         </div><!-- /input-group -->
                     </div><!-- /.col-lg-6 -->
@@ -104,11 +105,22 @@
                         </div>
             <footer class="footer">
                 <div class="container">
-                    <p><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>: anthilles <span class="glyphicon glyphicon-wrench" aria-hidden="true"> Api: NBP/Poloniex <span class="glyphicon glyphicon-envelope" aria-hidden="true"> <a href="mailto:anthilles@outlook.com">anthilles@outlook.com  </a><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"> XEM:  </p>
+                    <p><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>: anthilles <span class="glyphicon glyphicon-wrench" aria-hidden="true"> Api: NBP/Poloniex   .</span><span class="glyphicon glyphicon-envelope" aria-hidden="true"> <a href="mailto:anthilles@outlook.com">anthilles@outlook.com</a> || Zapraszam: <a target="_blank" href="http://linkowskaz.pl">linkowskaz.pl    .</a></span><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"> XEM: NC4GTK2WZMO4ZQJQKCQ5C5GDRVT7TEDG76KNSHMN  </span></p>
                 </div>
             </footer>
 
         <script src="script.js"></script>
+        <script src="pobieranie.js"></script>
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-103861259-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
     </body>    
 </html>
 

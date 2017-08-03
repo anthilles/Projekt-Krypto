@@ -48,7 +48,7 @@ function pobranie(){
                 const usdPln = btcUsd2 * JsonKursDolara;
                 const usdPln2 = usdPln.toFixed(2);
                 const kursBtcUsd = document.getElementById("wartoscPLN");
-                kursBtcUsd.innerHTML = usdPln2 + ' zł';
+                kursBtcUsd.innerHTML = usdPln2 + ' pln';
             }
         }
     }
@@ -56,7 +56,6 @@ function pobranie(){
 
 function JsonUSD(){
     dane = JSON.parse("http://api.nbp.pl/api/exchangerates/rates/c/usd/today/?format=json");
-    console.log(dane);
 }
 
 var xmlhttp = new XMLHttpRequest();
@@ -64,13 +63,12 @@ var JsonKursDolara;
 xmlhttp.onreadystatechange = function loaddata() {
     if (this.readyState == 4 && this.status == 200) {
         myObj = JSON.parse(this.responseText);
-        JsonKursDolara = myObj.rates[0].ask;
+        JsonKursDolara = myObj.rates[0].bid;
         JsonKursDolara2 = JsonKursDolara.toFixed(2);
-        document.getElementById("kursUsdPln").innerHTML = JsonKursDolara2 + ' zł';
+        document.getElementById("kursUsdPln").innerHTML = JsonKursDolara2 + ' pln';
         setTimeout(loaddata,5000);
     }
             
 };
 xmlhttp.open("GET", "http://api.nbp.pl/api/exchangerates/rates/c/usd/today/?format=json", true);
 xmlhttp.send();
-
