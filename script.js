@@ -1,17 +1,28 @@
+    $.getJSON('http://api.nbp.pl/api/exchangerates/rates/c/usd/today/?format=json',
+        function(data){
+            JsonKursDolara = data.rates[0].bid;
+            document.getElementById("kursUsdPln").innerHTML = JsonKursDolara.toFixed(2) + ' pln';
+    },function(error){
+        console.log(error);
+    });
+
+
 const nasluch = document.getElementById('buttonWartosc1'); //nasłuch na button (a wartość wprowadzana w okienku, chciałem by był tylko jak się naciśnie button)
 nasluch.addEventListener('click', function(){
    pobranie(); 
+   JsonUSD();
+
 });
 
 var kursXem; //var wyciągnięty przed funkcje - tak aby mógł być użyty poza nią
 var kursUSD;
+var daneUSD;
+var JsonKursDolara2;
 
 function setup() { //funkcja pobierająca dane z poloniex - odwołująca się do JSONa
     data = loadJSON("https://poloniex.com/public?command=returnTicker", gotData);
-            // console.log(kursXem);
              setTimeout(setup, 5000);
 };
-
 
 
 
@@ -21,6 +32,7 @@ function gotData(data) { //funkcja pobierająca z JSON konkretny kurs konkretnej
     const kursXemId = document.getElementById("kurs");
     kursXemId.innerHTML = kursXem;
     kursUSD = data.USDT_BTC.last;
+                // console.log(kursXem);
             // console.log('bla2!');
             //  setTimeout(gotData, 5000);
 
@@ -34,7 +46,7 @@ function pobranie(){
     przeliczenieXem();
     function przeliczenieXem(){ // funkcja przeliczająca wprowadzoną wartość XEM względem kursu BTC
 
-        const xemBtc = dane.value * kursXem;
+        const xemBtc = portfelWartoscrsXem * kursXem;
         const kursXemBtc = document.getElementById("kursXemBtc");
         kursXemBtc.innerHTML = xemBtc;
                                  setTimeout(przeliczenieXem, 5000);
@@ -55,21 +67,24 @@ function pobranie(){
     }
 }
 
-function JsonUSD(){
-    dane = JSON.parse("http://api.nbp.pl/api/exchangerates/rates/c/usd/today/?format=json");
-}
+// function JsonUSD(){
+//     dane = JSON.parse("http://api.nbp.pl/api/exchangerates/rates/c/usd/today/?format=json");
+// }
 
-var xmlhttp = new XMLHttpRequest();
-var JsonKursDolara;
-xmlhttp.onreadystatechange = function loaddata() {
-    if (this.readyState == 4 && this.status == 200) {
-        myObj = JSON.parse(this.responseText);
-        JsonKursDolara = myObj.rates[0].bid;
-        JsonKursDolara2 = JsonKursDolara.toFixed(2);
-        document.getElementById("kursUsdPln").innerHTML = JsonKursDolara2 + ' pln';
-        setTimeout(loaddata,5000);
-    }
+// var xmlhttp = new XMLHttpRequest();
+// var JsonKursDolara;
+// xmlhttp.onreadystatechange = function loaddata() {
+//     if (this.readyState == 4 && this.status == 200) {
+//         myObj = JSON.parse(this.responseText);
+//         JsonKursDolara = myObj;
+
+//         // JsonKursDolara2 = JsonKursDolara.toFixed(2);
+//         document.getElementById("kursUsdPln").innerHTML = JsonKursDolara + ' pln';
+//         setTimeout(loaddata,500);
+
+//     }
             
-};
-xmlhttp.open("GET", "http://api.nbp.pl/api/exchangerates/rates/c/usd/today/?format=json", true);
-xmlhttp.send();
+// };
+// xmlhttp.open("GET", "http://api.nbp.pl/api/exchangerates/rates/c/usd/today/?format=json", true);
+// xmlhttp.send();
+
