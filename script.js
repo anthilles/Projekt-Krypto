@@ -8,7 +8,7 @@ var kursUSD;
 
 function setup() { //funkcja pobierająca dane z poloniex - odwołująca się do JSONa
     data = loadJSON("https://poloniex.com/public?command=returnTicker", gotData);
-            console.log(kursXem);
+            // console.log(kursXem);
              setTimeout(setup, 5000);
 };
 
@@ -33,6 +33,7 @@ const dane = document.getElementById('wartosc1');  //wyświetla wprowadzoną ilo
 function pobranie(){
     przeliczenieXem();
     function przeliczenieXem(){ // funkcja przeliczająca wprowadzoną wartość XEM względem kursu BTC
+
         const xemBtc = dane.value * kursXem;
         const kursXemBtc = document.getElementById("kursXemBtc");
         kursXemBtc.innerHTML = xemBtc;

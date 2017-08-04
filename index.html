@@ -6,6 +6,10 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script
+  src="http://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
@@ -16,7 +20,7 @@
   <h1>Szybkie przeliczenie wartości posiadanych xemów <small>XEM <span class="glyphicon glyphicon-random" aria-hidden="true"></span> BTC / USDT / PLN</small></h1>
 </div>
                 <div class="row">
-                    <div class="col-lg-6">
+                    <!-- <div class="col-lg-6">
                     <div class="panel-heading">
                         <h3 class="panel-title">Liczba posiadanych XEM</h3>
                     </div>
@@ -25,14 +29,14 @@
                             <button class="btn btn-default" id="buttonWartosc1" type="button">Oblicz</button>
                         </span>
                         <input type="number" class="form-control" id="wartosc1" placeholder="Podaj liczbę posiadanych XEM">
-                        </div><!-- /input-group -->
-                    </div><!-- /.col-lg-6 -->
-                    <div class="col-lg-6">
+                        </div>
+                    </div> -->
+                    <div>
                                             <div class="panel-heading">
                         <h3 class="panel-title">Adres portfela XEM</h3>
                     </div>
                         <div class="input-group">
-                        <input type="text" class="form-control" id="wartoscPortfela" placeholder="W PRZYSZŁOŚCI || Dodaj adres swojego portfela XEM">
+                        <input type="text" class="form-control" id="wartoscPortfela" placeholder="Dodaj adres swojego portfela XEM">
                         <span class="input-group-btn">
                             <button class="btn btn-default" type="button" id="buttonPortfel">Dodaj</button>
                         </span>
@@ -45,6 +49,48 @@
                 <!-- <p class="topic">Adres portfela</p>
                 <input type="number" form="bla" id="adresportfela">
                 <input type="button" class="buttonPortfel" id="buttonPortfel" value="Dodaj"/> -->
+                
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Stan portfela (XEM)</h3>
+            </div>
+            <div class="panel-body" div id="portfel">
+                    portfel
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Importance</h3>
+            </div>
+            <div class="panel-body" div id="importance">
+                    Importance
+            </div>
+         </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Harvesting</h3>
+            </div>
+            <div class="panel-body" div id="wydobycie">
+             wydobycie
+            </div>
+         </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
 
                 <div class="panel panel-default">
                 <div class="panel-heading">
