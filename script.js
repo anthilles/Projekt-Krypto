@@ -7,19 +7,19 @@
     });
 
 
-const nasluch = document.getElementById('buttonWartosc1'); //nasłuch na button (a wartość wprowadzana w okienku, chciałem by był tylko jak się naciśnie button)
-nasluch.addEventListener('click', function(){
-   pobranie(); 
-   JsonUSD();
+// const nasluch = document.getElementById('buttonWartosc1'); //nasłuch na button (a wartość wprowadzana w okienku, chciałem by był tylko jak się naciśnie button)
+// nasluch.addEventListener('click', function(){
+//    pobranie(); 
+//    JsonUSD();
 
-});
+// });
 
-const nasluch = document.getElementById('buttonWartosc1'); //nasłuch na button (a wartość wprowadzana w okienku, chciałem by był tylko jak się naciśnie button)
-nasluch.addEventListener('touchstart', function(){
-   pobranie(); 
-   JsonUSD();
+// nasluch = document.getElementById('buttonWartosc1'); //nasłuch na button (a wartość wprowadzana w okienku, chciałem by był tylko jak się naciśnie button)
+// nasluch.addEventListener('touchstart', function(){
+//    pobranie(); 
+//    JsonUSD();
 
-});
+// });
 
 var kursXem; //var wyciągnięty przed funkcje - tak aby mógł być użyty poza nią
 var kursUSD;
