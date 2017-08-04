@@ -10,12 +10,18 @@ var adresPortfela;
 
 //1. pobranie wpisanego adresu
 const nasluchPortfel = document.getElementById('buttonPortfel'); //nasłuch na button (a wartość wprowadzana w okienku, chciałem by był tylko jak się naciśnie button)
+
 nasluchPortfel.addEventListener('click', function(){
 //    console.log(wartoscPortfela);
 const adresPortfela = adressXEM+wartoscPortfela.value;
 json();
 });
 
+nasluchPortfel.addEventListener('touchstart', function(){
+//    console.log(wartoscPortfela);
+const adresPortfela = adressXEM+wartoscPortfela.value;
+json();
+});
 
 //2. przeszukanie na stronie richlist
 
